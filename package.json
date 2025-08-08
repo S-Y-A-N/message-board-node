@@ -6,7 +6,7 @@
   "author": "S-Y-A-N",
   "type": "commonjs",
   "scripts": {
-    "start": "node --env-file=.env --watch app.js"
+    "start": "node --watch app.js"
   },
   "dependencies": {
     "ejs": "^3.1.10",
