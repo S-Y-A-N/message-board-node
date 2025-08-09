@@ -6,7 +6,7 @@
   "author": "S-Y-A-N",
   "type": "commonjs",
   "scripts": {
-    "start": "node --watch app.js"
+    "start": "node --trace-warnings app.js"
   },
   "dependencies": {
     "ejs": "^3.1.10",
