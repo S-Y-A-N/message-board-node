@@ -13,6 +13,6 @@ app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true }))
 app.use('/', indexRouter);
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`Listening on http://${hostname}:${port}`)
 })
