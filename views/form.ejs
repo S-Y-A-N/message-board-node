@@ -13,19 +13,28 @@
 
   <main>
     <div class="msg-form">
-      <form method="post" action="/new">
-        <div>
-          <label for="user">Name</label>
-          <input id="user" name="user" type="text" maxlength="20">
-        </div>
-        <br>
-        <div>
-          <label for="msg">Message</label>
-          <textarea id="msg" name="msg" type="text" maxlength="300"></textarea>
-        </div>
-        <br>
-        <button type="submit">Submit</button>
-      </form>
+      <% if (locals.errors) { %>
+        <ul class="errors">
+        <% errors.forEach((e)=> { %>
+          <p>
+            <li>• <%= e.msg %></li>
+          </p>
+          <% }); %>
+          </ul>
+            <% } %>
+              <form method="post" action="/new">
+                <div>
+                  <label for="user">Name</label>
+                  <input id="user" name="user" type="text" minlength="1" maxlength="20">
+                </div>
+                <br>
+                <div>
+                  <label for="msg">Message</label>
+                  <textarea id="msg" name="msg" type="text" minlength="1" maxlength="300"></textarea>
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+              </form>
     </div>
   </main>
 

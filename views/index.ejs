@@ -12,10 +12,10 @@
   </header>
 
   <main>
-    <ul>
+    <ul class="messages">
       <% messages.forEach((m)=> { %>
         <li>
-          <span class="msg"><b><%= m.user %>: </b><%= m.text %></span>
+          <span class="msg"><b><%= m.username %>: </b><%= m.text %></span>
           <span class="datetime"><%= m.added.toLocaleDateString() + ", " + m.added.toLocaleTimeString() %></span>
         </li>
             <% }); %>
