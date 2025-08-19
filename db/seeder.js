@@ -28,11 +28,7 @@ async function main() {
   console.log('Seeding...');
   console.log(sql);
   const client = new Client({
-    host: process.env.PG_HOST,
-    user: process.env.PG_USER,
-    database: process.env.PG_DATABASE,
-    password: process.env.PG_PASSWORD,
-    port: process.env.PG_PORT,
+    connectionString: process.env.DATABASE_URL
   });
 
   await client.connect();
